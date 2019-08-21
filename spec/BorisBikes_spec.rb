@@ -1,1 +1,3 @@
-require
+
+
+describe docking_station do
