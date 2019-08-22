@@ -25,4 +25,9 @@ describe DockingStation do
   it 'throws an error if there is no bike in the docking station' do
     expect { subject.release_bike }.to raise_error 'No bikes available'
   end
+
+  it 'throws an error if the docking station has a bike' do
+    subject.dock(Bike.new)
+    expect { subject.dock(Bike.new) }.to raise_error 'No space'
+  end
 end
